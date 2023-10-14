@@ -14,16 +14,22 @@ class detailsVC: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var jobLabel: UILabel!
     
-    var selectedSimpson : Simpson?
+    //var selectedSimpson : Simpson?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        let selectedSimpson = SelectedSimpson.shared.selected
+        
+        
+        
         nameLabel.text = selectedSimpson?.name
         jobLabel.text = selectedSimpson?.job
         imageView.image = selectedSimpson?.image
+         
 
-        // Do any additional setup after loading the view.
+        
     }
     
 

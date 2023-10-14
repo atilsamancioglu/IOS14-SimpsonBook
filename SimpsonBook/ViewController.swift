@@ -54,16 +54,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        chosenSimpson = mySimpsons[indexPath.row]
+        //chosenSimpson = mySimpsons[indexPath.row]
+        SelectedSimpson.shared.selected = mySimpsons[indexPath.row]
         self.performSegue(withIdentifier: "toDetailsVC", sender: nil)
     }
-    
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailsVC" {
             let destinationVC = segue.destination as! detailsVC
             destinationVC.selectedSimpson = chosenSimpson
         }
     }
+     */
 
 
 }

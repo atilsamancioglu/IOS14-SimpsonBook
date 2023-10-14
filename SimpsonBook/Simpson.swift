@@ -24,3 +24,9 @@ class Simpson {
     }
     
 }
+
+class SelectedSimpson {
+    static let shared = SelectedSimpson()
+    var selected : Simpson?
+    private init() {}
+}
